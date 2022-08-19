@@ -63,7 +63,7 @@ const Addnew = () => {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-password"
               >
-                Quest's title
+                Quests title
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -80,7 +80,7 @@ const Addnew = () => {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-password"
               >
-                Quest's description
+                Quests description
               </label>
               <textarea
                 className="resize-y rounded-md w-full p-2 bg-gray-200 "

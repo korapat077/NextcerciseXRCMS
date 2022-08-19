@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { IoLockClosedOutline, IoMailOutline } from "react-icons/io5";
 import HeadderSupper from "./Headder";
-const Layout =  ({ children }) => {
+const Layout = ({ children }) => {
   const [token, setToken] = useState("");
   useEffect(() => {
     const token = window.localStorage.getItem("auth-token");
@@ -16,20 +16,16 @@ const Layout =  ({ children }) => {
 
   const IsLogin = () => {
     if (token == null) {
-      // console.log(token);
       return (
         <div className="content">
           <HeadderSupper />
           <div className=" flex flex-wrap">
             <Navbar />
-            <div className="mt-7 ml-[4%]  w-9/12">
-              {children}
-            </div>
+            <div className="mt-7 ml-[4%]  w-9/12">{children}</div>
           </div>
         </div>
       );
     } else {
-      // console.log(token);
       return (
         <div>
           <div className="flex h-screen justify-center items-center bg-black  font-sans ">
@@ -45,9 +41,7 @@ const Layout =  ({ children }) => {
                         <div className="pr-2 pt-1">
                           <IoLockClosedOutline />
                         </div>
-                        <div>
-                          Email address
-                        </div>
+                        <div>Email address</div>
                       </div>
                     </label>
                     <input
@@ -65,9 +59,7 @@ const Layout =  ({ children }) => {
                         <div className="pr-2 pt-1">
                           <IoMailOutline />
                         </div>
-                        <div>
-                          Password
-                        </div>
+                        <div>Password</div>
                       </div>
                     </label>
                     <input
@@ -77,7 +69,8 @@ const Layout =  ({ children }) => {
                     />
                   </div>
                   <div className="flex items-center justify-between">
-                    <Link href="/Layout"
+                    <Link
+                      href="/Layout"
                       className="bg-[#000] hover:bg-[#3D3C3C] text-white text-sm  py-2 px-6 rounded "
                       type="button"
                     >
@@ -95,13 +88,11 @@ const Layout =  ({ children }) => {
             </div>
           </div>
         </div>
-      )
+      );
     }
   };
 
-  return (
-    <IsLogin />
-  );
+  return <IsLogin />;
 };
 
 export default Layout;

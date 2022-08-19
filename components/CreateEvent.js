@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { BsFillCaretDownFill, BsTrash } from "react-icons/bs";
 import Swal from "sweetalert2";
-
+import Image from "next/image";
 const CreateEvent = () => {
   const [bookingInfo, setBookingInfo] = useState([]);
   const [base64Event, setBase64Event] = useState(null);
@@ -57,7 +57,7 @@ const CreateEvent = () => {
   const ImagePreview = (props) => {
     const { base64 } = props;
     if (base64 !== null) {
-      return <img src={base64} width="100%" />;
+      return <Image src={base64} width="100%" />;
     } else {
       return (
         <div className="flex flex-col justify-center items-center pt-5 pb-6">
@@ -119,7 +119,7 @@ const CreateEvent = () => {
   const ImagePreviewHeadders = (props) => {
     const { base64 } = props;
     if (base64 !== null) {
-      return <img src={base64} width="100%" />;
+      return <Image src={base64} width="100%" />;
     } else {
       return (
         <div className="flex flex-col justify-center items-center pt-5 pb-6">
@@ -181,7 +181,7 @@ const CreateEvent = () => {
   const ImagePreviewvisual = (props) => {
     const { base64 } = props;
     if (base64 !== null) {
-      return <img src={base64} width="100%" />;
+      return <Image src={base64} width="100%" />;
     } else {
       return (
         <div className="flex flex-col justify-center items-center pt-5 pb-6">
@@ -242,7 +242,9 @@ const CreateEvent = () => {
           url: `${process.env.NEXT_PUBLIC_APP_NAME}/event`,
         }).then(function (response) {
           console.log(response.data.result.saveEventDraft.eId);
-          window.location.assign(`/events/addnew/${response.data.result.saveEventDraft.eId}`)
+          window.location.assign(
+            `/events/addnew/${response.data.result.saveEventDraft.eId}`
+          );
           Swal.fire({
             confirmButtonText: "save",
             confirmButtonColor: "#53a33d",
@@ -343,7 +345,7 @@ const CreateEvent = () => {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-first-name"
               >
-                Event's title
+                Events title
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700  rounded py-3 px-4 mb-3 leading-tight "
@@ -357,7 +359,7 @@ const CreateEvent = () => {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-first-name"
               >
-                Event's period
+                Events period
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700   rounded py-3 px-4 mb-3 leading-tight "
@@ -388,7 +390,7 @@ const CreateEvent = () => {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-city"
               >
-                Event's description
+                Events description
               </label>
               <textarea
                 className="resize-y rounded-md w-full h-20 p-2 bg-gray-200 "
@@ -401,7 +403,7 @@ const CreateEvent = () => {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-state"
               >
-                Event's coupon reward id
+                Events coupon reward id
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -447,7 +449,7 @@ const CreateEvent = () => {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-city"
               >
-                Event's Banner
+                Events Banner
               </label>
               <UploadFileEvent
                 fileName="setBinaryEvent"

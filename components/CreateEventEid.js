@@ -355,7 +355,7 @@ const CreateEventEid = ({ eIdEdit }) => {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-first-name"
               >
-                Event's title
+                Events title
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700  rounded py-3 px-4 mb-3 leading-tight "
@@ -370,7 +370,7 @@ const CreateEventEid = ({ eIdEdit }) => {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-first-name"
               >
-                Event's period
+                Events period
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700   rounded py-3 px-4 mb-3 leading-tight "
@@ -403,7 +403,7 @@ const CreateEventEid = ({ eIdEdit }) => {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-city"
               >
-                Event's description
+                Events description
               </label>
               <textarea
                 className="resize-y rounded-md w-full h-20 p-2 bg-gray-200 "
@@ -417,7 +417,7 @@ const CreateEventEid = ({ eIdEdit }) => {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-state"
               >
-                Event's coupon reward id
+                Events coupon reward id
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -466,7 +466,7 @@ const CreateEventEid = ({ eIdEdit }) => {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-city"
               >
-                Event's Banner
+                Events Banner
               </label>
               <UploadFileEvent
                 fileName="setBinaryEvent"

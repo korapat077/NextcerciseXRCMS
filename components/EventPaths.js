@@ -100,21 +100,24 @@ const EventPaths = ({ eIdEdit }) => {
               {pathObj.map((r, k) => {
                 if (k > 0) {
                   return (
-                    <div class="block p-6 mt-5 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <div className="block p-6 mt-5 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                       <div key={k} className="flex flex-wrap">
                         <div className=" text-base mr-2">{k}</div>
                         <div className=" flex flex-wrap gap-2">
                           {r.map((r2, k2) => {
                             return (
-                              <div key={k2} className=" text-base px-2  bg-slate-600 text-white rounded-2xl">{r2.cpId}</div>
-                            )
-
+                              <div
+                                key={k2}
+                                className=" text-base px-2  bg-slate-600 text-white rounded-2xl"
+                              >
+                                {r2.cpId}
+                              </div>
+                            );
                           })}
                         </div>
-
                       </div>
                     </div>
-                  )
+                  );
                 }
               })}
             </form>

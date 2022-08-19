@@ -16,7 +16,7 @@ const Events = () => {
   return (
     <div className=" mb-5">
       <div className=" grid grid-cols-5 gap-4 justify-items-center items-center">
-        <div className="font-bold">Event's title</div>
+        <div className="font-bold">Events title</div>
         <div className=" font-bold">Created</div>
         <div className=" font-bold">Status</div>
         <div className=" font-bold">Author</div>
